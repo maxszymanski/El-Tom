@@ -1,0 +1,78 @@
+@use 'components.scss' as *;
+@use 'colors.scss' as *;
+@font-face {
+	font-family: 'nunitolight';
+	src: url('../fonts/myfont-light-webfont.woff2') format('woff2'),
+		url('../fonts/myfont-light-webfont.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nunito';
+	src: url('../fonts/myfont-regular-webfont.woff2') format('woff2'),
+		url('../fonts/myfont-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nunitoitalic';
+	src: url('../fonts/myfont-italic-webfont.woff2') format('woff2'),
+		url('../fonts/myfont-italic-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nunitobold';
+	src: url('../fonts/myfont-bold-webfont.woff2') format('woff2'),
+		url('../fonts/myfont-bold-webfont.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	position: relative;
+	font-size: 1.8rem;
+	background-color: rgb(250, 250, 250);
+	font-family: $regular-font;
+	overflow-x: hidden;
+    height: 100%;
+  
+}
+.container {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+.sticky-body {
+	overflow: hidden;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+}
+
+p {
+	line-height: 150%;
+}

@@ -1,0 +1,10 @@
+@use 'components.scss' as *;
+@use 'colors.scss' as *;
+
+@media(min-width:768px){
+    .aboutus {
+        &-container {
+            padding: 5em 0;
+        }
+    }
+}
