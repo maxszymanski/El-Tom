@@ -7,6 +7,9 @@
     .section-title {
         font-size: 3.6rem;
     }
+    .section-container-top {
+        margin-top: 3em;
+    }
 	.navbar {
         &__burger-btn {
             display: none;
@@ -32,7 +35,7 @@
         }
 	}
     .header {
-        background-image: url(../img/light-big.png);
+        background-image: url('../img/light-big.webp');
         &__info {
             h1{
                 font-size: 2.6rem;
@@ -43,9 +46,6 @@
         }
     }
     .aboutus {
-        &-container {
-            margin-top: 3em;
-        }
         &-box {
             flex-direction: row;
             align-items: center;
@@ -57,6 +57,25 @@
             }
         }
     }
+    .offers {
+        .cards {
+            margin-top: 6em;
+        }
+        .card {
+            margin-bottom: 5em;
+            &:focus {
+                outline: solid 1px $yellow;	
+            }
+        }
+            }
+            .contact {
+                &__wrapper {
+                    flex-direction: row;
+                }
+                &__info {
+                    margin-top: 2em;
+                }
+            }
 }
 
 
@@ -67,6 +86,17 @@
             max-width: 420px;
         }
     }
+}
+.price__text {
+    max-width: 55%;
+}
+.price {
+    .special-btn {
+        margin-left: 4em;
+    }
+}
+.contact__form-box {
+    max-width: 1000px !important;
 }
 
 

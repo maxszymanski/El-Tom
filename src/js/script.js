@@ -1,13 +1,11 @@
-const { setTimeout } = require("timers")
-
 let logo,
 	navbar,
 	burgerBtn,
 	menu,
 	menuItems,
-	menuLinks,
-	cardFrame,
-	cardBtn
+	navLinks,
+	sections
+
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo')
@@ -15,18 +13,16 @@ const prepareDOMElements = () => {
 	burgerBtn = document.querySelector('.navbar__burger-btn')
 	menu = document.querySelector('.navbar__list')
 	menuItems = document.querySelectorAll('.navbar__item')
-	menuLinks = document.querySelectorAll('.navbar__item a')
-	cardFrame = document.querySelector('.card__frame')
-	cardBtn = document.querySelector('.card__overlay')
+	navLinks = document.querySelectorAll('.navbar__item a')
+	sections = document.querySelectorAll('.section')
 }
 
 const prepareDOMEvents = () => {
 	burgerBtn.addEventListener('click', showMenu)
 	logo.addEventListener('click', closeMenu)
 	menuItems.forEach(item => item.addEventListener('click', closeMenu))
-	menuLinks.forEach(link => link.addEventListener('click', handleActiveClass))
-	cardBtn.addEventListener('mouseover', hideCardInfo)
-	cardBtn.addEventListener('mouseout', showCardInfo)
+	navLinks.forEach(link => link.addEventListener('click', handleActiveClass))
+	window.addEventListener('scroll',scrollSpy)
 }
 const showMenu = () => {
 	menu.classList.toggle('show-menu')
@@ -44,11 +40,19 @@ const handleActiveClass = e => {
 	menuItems.forEach(item => item.classList.remove('navbar__item--active'))
 	e.target.parentElement.classList.add('navbar__item--active')
 }
-const hideCardInfo = () => {
-	cardFrame.style.visibility = 'hidden'
-}
-const showCardInfo = () => {
-	cardFrame.style.visibility = 'visible'
+const scrollSpy = () => {
+	sections.forEach(section => {
+        let top = window.scrollY
+        let offset = section.offsetTop - 90;
+        let height = section.offsetHeight ;
+        let id = section.getAttribute('id')
+        if(top >= offset && top < offset + height) {
+            menuItems.forEach(link => {
+                link.classList.remove('navbar__item--active')
+                document.querySelector('a[href*=' + id + ']').parentElement.classList.add('navbar__item--active')
+            })
+        }
+    })
 }
 prepareDOMElements()
 prepareDOMEvents()
