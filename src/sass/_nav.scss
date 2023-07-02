@@ -1,0 +1,59 @@
+@use 'components.scss' as *;
+@use 'colors.scss' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(32, 32, 32, 0.1);
+    z-index: 1000;
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px
+    }
+    &__logo {
+        margin-left: .5em;
+        margin-top: 0.5em;
+        img {
+            height: 60px
+        }
+    }
+    &__list {
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            transform: translateX(100%);
+            background-color: $white;
+            opacity: 0;
+            transition: transform .7s,opacity .7s;
+            overflow: auto
+    }
+    &__item{
+    display: inline-block;
+    margin-bottom: 2em;
+    font-size: 3rem;
+    list-style: none;
+    text-transform: uppercase;
+    a{
+        padding: 1em 2em;
+            color: $blue;
+            transition: color .3s
+    }
+    &--active a,a:hover {
+        color: $yellow
+    }
+    }
+}
+    .show-menu {
+        transform: translateX(0);
+        opacity: 1
+    }
