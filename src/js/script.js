@@ -4,8 +4,10 @@ let logo,
 	menu,
 	menuItems,
 	navLinks,
-	sections
-
+	sections,
+	footerDate,
+	cookieBox,
+	cookieBtn
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo')
@@ -15,6 +17,9 @@ const prepareDOMElements = () => {
 	menuItems = document.querySelectorAll('.navbar__item')
 	navLinks = document.querySelectorAll('.navbar__item a')
 	sections = document.querySelectorAll('.section')
+	footerDate = document.querySelector('.footer__date')
+	cookieBox = document.querySelector('.cookie-box')
+	cookieBtn = document.querySelector('.cookie-btn')
 }
 
 const prepareDOMEvents = () => {
@@ -23,6 +28,7 @@ const prepareDOMEvents = () => {
 	menuItems.forEach(item => item.addEventListener('click', closeMenu))
 	navLinks.forEach(link => link.addEventListener('click', handleActiveClass))
 	window.addEventListener('scroll',scrollSpy)
+	cookieBtn.addEventListener('click', closeCookieBox)
 }
 const showMenu = () => {
 	menu.classList.toggle('show-menu')
@@ -54,5 +60,20 @@ const scrollSpy = () => {
         }
     })
 }
+const currentDate = () => {
+    let date = new Date().getFullYear();
+	footerDate.textContent = date
+}
+const cookieCheck = () => {
+	if (localStorage.getItem("cookie")) {
+		cookieBox.classList.add("cookie-hidden");
+	  }
+}
+const closeCookieBox = (params) => {
+	localStorage.setItem("cookie", "true");
+  cookieBox.classList.add("cookie-hidden")
+}
 prepareDOMElements()
 prepareDOMEvents()
+currentDate()
+cookieCheck()

@@ -316,11 +316,25 @@ color:rgb(173, 151, 23);
   }
   .form-btn {
 	text-align: center;
-	margin: 2.5em 0 1.5em;
+	margin: 2.5em 0 0.5em;
   }
   .contact__form-box .special-btn {
 width: 80%;
 padding: 0.5em;
   }
-
+  .form-info{
+font-size: 1.4rem;
+padding:0 1em 3em ;
+line-height: 170%;
+  }
+}
+.footer {
+text-align: center;
+border-top: 1px solid rgb(32, 32, 32, 0.1) ;
+}
+.footer__info {
+	padding: 1em 0;
+}
+.footer__date {
+	margin: 0 0.2em;
 }

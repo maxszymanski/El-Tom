@@ -64,8 +64,8 @@
         .card {
             margin-bottom: 5em;
             &:focus {
-                outline: solid 1px $yellow;	
-            }
+                outline: solid 1px transparent;	
+            }   
         }
             }
             .contact {
@@ -75,6 +75,9 @@
                 &__info {
                     margin-top: 2em;
                 }
+                .form-info{
+                    padding:0 2em 3em ;
+                      }
             }
 }
 
@@ -95,9 +98,14 @@
         margin-left: 4em;
     }
 }
-.contact__form-box {
-    max-width: 1000px !important;
+.contact {
+    .contact__form-box {
+        max-width: 900px;
+        margin-left: 2em;
+    }
 }
-
+.contact__info {
+min-width: 300px;
+}
 
 }

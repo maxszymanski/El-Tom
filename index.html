@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El-Tom | Profesjonalne instalacje elektryczne dla Twojego domu i biznesu!</title>
-    <meta name="description" content="W El-Tom oferujemy kompleksowe instalacje elektryczne dla domów i firm. Zapewniamy innowacyjne rozwiązania oraz wysoką jakość usług!">
-    <meta name="keywords" content="instalacje elektryczne, usługi elektryczne, systemy oświetleniowe, elektryk, awarie elektryczne, systemy oświetleniowe">
+    <meta name="description"
+        content="W El-Tom oferujemy kompleksowe instalacje elektryczne dla domów i firm. Zapewniamy innowacyjne rozwiązania oraz wysoką jakość usług!">
+    <meta name="keywords"
+        content="instalacje elektryczne, usługi elektryczne, systemy oświetleniowe, elektryk, awarie elektryczne, systemy oświetleniowe">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="./dist/css/hamburgers.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body>
-   <nav class="navbar">
+    <nav class="navbar" data-aos="fade-down">
     <div class="container">
         <div class="navbar__nav">
             <div class="navbar__logo">
@@ -24,6 +27,7 @@
                 </span>
             </button>
             <ul class="navbar__list">
+                <li class="navbar__item scroll-spy-repair"><a href="#header">header</a></li>
                 <li class="navbar__item"><a href="#aboutus">o nas</a></li>
                 <li class="navbar__item"><a href="#offers">oferta</a></li>
                 <li class="navbar__item"><a href="#price">cennik</a></li>
@@ -32,24 +36,24 @@
         </div>
     </div>
 </nav>
-   <header class="header section" id="header">
+    <header class="header section" id="header">
     <div class="container">
         <div class="header__info">
-            <p>El-Tom</p>
-            <h1>Zaufana firma elektryczna</h1>
-            <button class="special-btn" onclick="location.href='#offers'" type="button">Oferta</button>
+            <p data-aos="zoom-in-down" id="start">El-Tom</p>
+            <h1 data-aos="zoom-in" data-aos-anchor="#start">Zaufana firma elektryczna</h1>
+            <button data-aos-anchor="#start" data-aos="zoom-in-up" class="special-btn" onclick="location.href='#offers'" type="button" >Oferta</button>
         </div>
     </div>
 </header>
-   <main class="main">
+    <main class="main">
     <section class="aboutus section" id="aboutus">
         <div class="container">
             <div class="section-container section-container-top">
-                <h2 class="section-title">Poznaj naszą firmę</h2>
+                <h2 data-aos="zoom-in" class="section-title">Poznaj naszą firmę</h2>
                 <div class="aboutus-box">
                     <img src="./dist/img/fuse-small.webp" alt="Elektyk montujący żółty bezpiecznik w skrzynce"
-                        class="aboutus-box__img">
-                    <div class="aboutus-box__text">
+                        class="aboutus-box__img" data-aos="zoom-in">
+                    <div class="aboutus-box__text" data-aos="zoom-in">
                         <p>Witamy w El-tom. Jesteśmy firmą, która świadczy niezawodne <strong>usługi
                                 elektryczne</strong> dla klientów indywidualnych i biznesowych. Nasz doświadczony zespół
                             elektryków oferuje kompleksowe instalacje, modernizacje i naprawy, zwracając szczególną
@@ -68,8 +72,8 @@
     <section class="offers section" id="offers">
         <div class="container">
             <div class="section-container section-container-top">
-                <h2 class="section-title">Elektryczne możliwości</h2>
-                <div class="cards">
+                <h2 class="section-title" data-aos="zoom-in">Elektryczne możliwości</h2>
+                <div class="cards" data-aos="zoom-in">
                     <div class="card cards__item" tabindex="0" role="article"
                         aria-label="Montaż instalacji elektrycznych w domach i budynkach różnego typu.">
                         <div class="card__frame">
@@ -304,10 +308,10 @@
     <section class="price section" id="price">
         <div class="container">
             <div class="section-container">
-                <h2 class="section-title">Cennik</h2>
+                <h2 class="section-title" data-aos="zoom-in">Cennik</h2>
                 <div class="price__box">
-                    <p class="price__text">W naszej firmie ceniemy indywidualne podejście do klientów i ich unikalne potrzeby. Dlatego też, w przypadku usług i produktów oferowanych przez naszą firmę, ceny ustalamy indywidualnie po kontakcie z naszym zespołem.</p>
-                    <button class="special-btn" onclick="location.href='#contact'" type="button">Skontaktuj się z nami</button>
+                    <p class="price__text" data-aos="zoom-in">W naszej firmie ceniemy indywidualne podejście do klientów i ich unikalne potrzeby. Dlatego też, w przypadku usług i produktów oferowanych przez naszą firmę, ceny ustalamy indywidualnie po kontakcie z naszym zespołem.</p>
+                    <button class="special-btn" data-aos="zoom-in" onclick="location.href='#contact'" type="button">Skontaktuj się z nami</button>
                 </div>
             </div>
         </div>
@@ -315,23 +319,23 @@
     <section class="contact section" id="contact">
         <div class="container">
             <div class="section-container">
-               <h2 class="section-title">Kontakt</h2>
+               <h2 data-aos="zoom-in" class="section-title">Kontakt</h2>
                <div class="contact__wrapper">
-                <div class="contact__info">
+                <div data-aos="zoom-in" class="contact__info">
                     <h3>El-Tom</h3>
-<p>34-115 Ryczów</p>
-<p>ul. Kolejowa 51</p>
- <a class="number__link-mobile" href="tel:888148045"><svg xmlns="http://www.w3.org/2000/svg" class="contact__icon icon icon-tabler icon-tabler-phone-filled" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<p>ul. Zajazie 62</p>
+<p>32-061 Przeginia Duchowna</p>
+ <a href="tel:518485781"><svg xmlns="http://www.w3.org/2000/svg" class="contact__icon icon icon-tabler icon-tabler-phone-filled" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path d="M9 3a1 1 0 0 1 .877 .519l.051 .11l2 5a1 1 0 0 1 -.313 1.16l-.1 .068l-1.674 1.004l.063 .103a10 10 0 0 0 3.132 3.132l.102 .062l1.005 -1.672a1 1 0 0 1 1.113 -.453l.115 .039l5 2a1 1 0 0 1 .622 .807l.007 .121v4c0 1.657 -1.343 3 -3.06 2.998c-8.579 -.521 -15.418 -7.36 -15.94 -15.998a3 3 0 0 1 2.824 -2.995l.176 -.005h4z" stroke-width="0" fill="currentColor"></path>
- </svg>888148045</a>
+ </svg>518485781</a>
  <a href="mailto:kontakt@eltom.pl"><svg xmlns="http://www.w3.org/2000/svg" class="contact__icon icon icon-tabler icon-tabler-mail-filled" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" stroke-width="0" fill="currentColor"></path>
     <path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" stroke-width="0" fill="currentColor"></path>
  </svg>kontakt@eltom.pl</a>
                     </div>
-                    <div class="contact__form-box">
+                    <div data-aos="zoom-in" class="contact__form-box">
                         <div class="text">Formularz kontaktowy
                         </div>
                         <form action="mail.php" method="post">
@@ -369,26 +373,38 @@
                                 <div class="form-btn">
                                     <button class="special-btn" type="submit" name="contact-submit">Wyślij</button>
                                 </div>
-
                         </form>
+                        <p class="form-info">Przesyłając ten formularz, wyrażasz zgodę na przetwarzanie swoich danych osobowych zgodnie z naszą <a href="politykaprywatnosci.html">polityką prywatności</a>. <br> Twoje dane będą wykorzystane wyłącznie w celu udzielenia odpowiedzi na Twoje zapytanie i świadczenia usług, o które pytasz.</p>
                     </div>
                 </div>
                </div>
             </div>
         </div>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 </main>
-<script src="./dist/js/script.min.js"></script>
+    <div class="cookie-box">
+        <div class="container">
+            <p>Kontynuując korzystanie z naszej strony, zgadzasz się na wykorzystanie plików cookie.<br>Dowiedz się
+                więcej o plikach cookie i naszej polityce prywatności, odwiedzając naszą stronę <a
+                    href="politykaprywatnosci.html">"Polityka prywatności"</a>.</p>
+            <button class="cookie-btn">OK</button>
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__box">
+            <p class="footer__info">&copy;<span class="footer__date"></span>El-Tom</p>
+        </div>
+    </div>
+</footer>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+            delay: 150
+        });
+    </script>
+    <script src="./dist/js/script.min.js"></script>
 </body>
 
 </html>
