@@ -68,6 +68,9 @@
             }   
         }
             }
+            .price {
+                background-image: url('../img/lamp-big.webp');
+            }
             .contact {
                 &__wrapper {
                     flex-direction: row;
@@ -108,4 +111,12 @@
 min-width: 300px;
 }
 
+}
+@keyframes cookieSlide {
+	0% {
+		bottom: -100%;
+	}
+	100% {
+		bottom: 0;
+	}
 }

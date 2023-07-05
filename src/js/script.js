@@ -7,7 +7,8 @@ let logo,
 	sections,
 	footerDate,
 	cookieBox,
-	cookieBtn
+	cookieBtn,
+	msgStatus
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo')
@@ -20,6 +21,7 @@ const prepareDOMElements = () => {
 	footerDate = document.querySelector('.footer__date')
 	cookieBox = document.querySelector('.cookie-box')
 	cookieBtn = document.querySelector('.cookie-btn')
+	msgStatus = document.querySelector('.msg-status')
 }
 
 const prepareDOMEvents = () => {
@@ -69,11 +71,33 @@ const cookieCheck = () => {
 		cookieBox.classList.add("cookie-hidden");
 	  }
 }
-const closeCookieBox = (params) => {
+const closeCookieBox = () => {
 	localStorage.setItem("cookie", "true");
   cookieBox.classList.add("cookie-hidden")
 }
+const msgCheck = () => {
+	if(document.location.search === '?mail_status=sent') {
+msgStatus.classList.add('success')
+msgStatus.textContent = 'Wiadomość wysłana!'
+
+setTimeout(() => {
+	msgStatus.classList.remove('success')
+},3000)
+	}
+	if(document.location.search === '?mail_status=error') {
+msgStatus.classList.add('error')
+msgStatus.textContent = 'Wystąpił błąd. Napisz na kontakt@eltom.online'
+
+setTimeout(() => {
+	msgStatus.classList.remove('error')
+},3000)
+	}
+	
+	
+}
+
 prepareDOMElements()
 prepareDOMEvents()
 currentDate()
+msgCheck()
 cookieCheck()

@@ -117,7 +117,7 @@ p {
 	text-transform: uppercase;
 	font-weight: normal;
 	border-radius: 3rem;
-	border: 2px solid currentColor;			
+	border: 2px solid currentColor;
 	color: $yellow;
 	background-color: transparent;
 	overflow: hidden;
@@ -136,7 +136,7 @@ p {
 		transform-origin: top left;
 		transform: translate(-100%, 0) rotate(10deg);
 		z-index: -1;
-		transition: .3s transform ease-out;
+		transition: 0.3s transform ease-out;
 	}
 	&:hover::before {
 		transform: translate(0);
@@ -155,6 +155,7 @@ p {
 	font-size: 1.4rem;
 	background-color: rgb(237, 237, 237);
 	z-index: 2000;
+	animation: cookieSlide 1s;
 	.container {
 		display: flex;
 		justify-content: space-evenly;
@@ -162,6 +163,7 @@ p {
 		padding: 0;
 	}
 }
+
 .cookie-btn {
 	padding: 1.5em 3em;
 	background-color: $yellow;
@@ -171,4 +173,52 @@ p {
 }
 .cookie-hidden {
 	display: none;
+}
+.msg-status {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	width: 100%;
+	max-width: 600px;
+	font-size: 2.4rem;
+	z-index: 1001;
+}
+.success {
+	display: flex;
+	background-color: $yellow;
+}
+.error {
+	display: flex;
+	background-color: rgb(255, 0, 0);
+}
+.error-page {
+	background-color: #fff;
+}
+.nofound {
+	position: relative;
+	padding: 20em 2em;
+	background-image: url('https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	text-align: center;
+	&__text {
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		h2 {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 2.6rem;
+			margin-bottom: 1em;
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
 }
