@@ -1,14 +1,4 @@
-let logo,
-	navbar,
-	burgerBtn,
-	menu,
-	menuItems,
-	navLinks,
-	sections,
-	footerDate,
-	cookieBox,
-	cookieBtn,
-	msgStatus
+let logo, navbar, burgerBtn, menu, menuItems, navLinks, sections, footerDate, cookieBox, cookieBtn, msgStatus
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo')
@@ -29,7 +19,7 @@ const prepareDOMEvents = () => {
 	logo.addEventListener('click', closeMenu)
 	menuItems.forEach(item => item.addEventListener('click', closeMenu))
 	navLinks.forEach(link => link.addEventListener('click', handleActiveClass))
-	window.addEventListener('scroll',scrollSpy)
+	window.addEventListener('scroll', scrollSpy)
 	cookieBtn.addEventListener('click', closeCookieBox)
 }
 const showMenu = () => {
@@ -45,55 +35,57 @@ const closeMenu = () => {
 }
 
 const handleActiveClass = e => {
-	menuItems.forEach(item => item.classList.remove('navbar__item--active'))
-	e.target.parentElement.classList.add('navbar__item--active')
+	if (document.body.classList.contains('main-page')) {
+		menuItems.forEach(item => item.classList.remove('navbar__item--active'))
+		e.target.parentElement.classList.add('navbar__item--active')
+	}
 }
 const scrollSpy = () => {
-	sections.forEach(section => {
-        let top = window.scrollY
-        let offset = section.offsetTop - 90;
-        let height = section.offsetHeight ;
-        let id = section.getAttribute('id')
-        if(top >= offset && top < offset + height) {
-            menuItems.forEach(link => {
-                link.classList.remove('navbar__item--active')
-                document.querySelector('a[href*=' + id + ']').parentElement.classList.add('navbar__item--active')
-            })
-        }
-    })
+	if (document.body.classList.contains('main-page')) {
+		sections.forEach(section => {
+			let top = window.scrollY
+			let offset = section.offsetTop - 90
+			let height = section.offsetHeight
+			let id = section.getAttribute('id')
+			if (top >= offset && top < offset + height) {
+				menuItems.forEach(link => {
+					link.classList.remove('navbar__item--active')
+					document.querySelector('a[href*=' + id + ']').parentElement.classList.add('navbar__item--active')
+				})
+			}
+		})
+	}
 }
 const currentDate = () => {
-    let date = new Date().getFullYear();
+	let date = new Date().getFullYear()
 	footerDate.textContent = date
 }
 const cookieCheck = () => {
-	if (localStorage.getItem("cookie")) {
-		cookieBox.classList.add("cookie-hidden");
-	  }
+	if (localStorage.getItem('cookie')) {
+		cookieBox.classList.add('cookie-hidden')
+	}
 }
 const closeCookieBox = () => {
-	localStorage.setItem("cookie", "true");
-  cookieBox.classList.add("cookie-hidden")
+	localStorage.setItem('cookie', 'true')
+	cookieBox.classList.add('cookie-hidden')
 }
 const msgCheck = () => {
-	if(document.location.search === '?mail_status=sent') {
-msgStatus.classList.add('success')
-msgStatus.textContent = 'Wiadomość wysłana!'
+	if (document.location.search === '?mail_status=sent') {
+		msgStatus.classList.add('success')
+		msgStatus.textContent = 'Wiadomość wysłana!'
 
-setTimeout(() => {
-	msgStatus.classList.remove('success')
-},3000)
+		setTimeout(() => {
+			msgStatus.classList.remove('success')
+		}, 3000)
 	}
-	if(document.location.search === '?mail_status=error') {
-msgStatus.classList.add('error')
-msgStatus.textContent = 'Wystąpił błąd. Napisz na kontakt@eltom.online'
+	if (document.location.search === '?mail_status=error') {
+		msgStatus.classList.add('error')
+		msgStatus.textContent = 'Wystąpił błąd. Napisz na kontakt@eltom.online'
 
-setTimeout(() => {
-	msgStatus.classList.remove('error')
-},3000)
+		setTimeout(() => {
+			msgStatus.classList.remove('error')
+		}, 3000)
 	}
-	
-	
 }
 
 prepareDOMElements()
