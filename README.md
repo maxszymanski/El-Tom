@@ -7,7 +7,7 @@
 
 ### Description
 
-  Hi, this is my first website created for a client from a to z. 
+  Hi, this is my first website created for a client from A to Z. 
   I made it according to all the latest standards. 
   The results of the lighthouse report: 
 
