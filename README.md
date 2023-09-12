@@ -38,8 +38,7 @@ Live demo: [Eltom](https://eltom.online/).
 ## Screenshots
 
 ![](./screenshots/screen_%20one.png)
-![Start](./images/screenshots-rock/screen-1.png)
-![Search](./images/screenshots-rock/screen-2.png)
+![Screen](./screenshots/screen-allpage.png)
 
 ## Contact
 
