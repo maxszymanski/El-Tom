@@ -43,4 +43,4 @@ Live demo: [Eltom](https://eltom.online/)
 
 ## Contact
 
-Created by [@Max Szymański](https://github.com/maxszymanski) - feel free to contact me!
+Created by [@Max Szymański](https://maxszymanski.pl) - feel free to contact me!
