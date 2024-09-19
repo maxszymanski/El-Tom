@@ -4,7 +4,7 @@ This website was created as a practice project to improve skills in design, opti
 
 Adopting the latest SEO and optimisation standards was a priority and the project allowed me to gain valuable experience working on a website from start to finish.
 
-Live demo: [Eltom](https://eltom.online/)
+Live demo: [Eltom](https://eltom.biz.pl/)
 
 ## Table of Contents
 
